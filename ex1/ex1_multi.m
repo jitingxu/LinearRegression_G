@@ -110,14 +110,12 @@ fprintf('\n');
 X_pred = (X_pred - mu) ;
 X_pred =[X_pred(1)/sigma(1)  X_pred(2)/sigma(2)];
  X_pred = [ones(m,1) X_pred];
-price = X_pred * theta; % You should change this
+price = X_pred * theta; % You should change 
 
 
 % ============================================================
 
-fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
-         '(using gradient descent):\n $%f\n'], price);
-
+fprintf(['Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):\n $%f\n'], price);
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
@@ -155,11 +153,10 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
-
-
+price = [1 1650 3] * theta;
 % ============================================================
 
 fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
          '(using normal equations):\n $%f\n'], price);
+
 

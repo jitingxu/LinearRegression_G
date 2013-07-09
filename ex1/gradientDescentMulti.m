@@ -18,28 +18,8 @@ for iter = 1:num_iters
     %
 	
 	%gradient with respect to theta 
-	X_grad = [zeros(m,1) X(:,(2:3))];
-	
-	fprintf('First 20 examples from the dataset: \n');
-	fprintf(' x = [%.0f %.0f %.0f], y = %.0f \n', [X_grad(1:10,:) y(1:10,:)]');
-
-	fprintf('Program paused. Press enter to continue.\n');
-	%pause;
-
+	X_grad = [ones(m,1) X(:,(2:3))];
 	theta = theta - alpha * ((X * theta - y)' * X_grad)' / m;
-
-
-	fprintf(' theta = [%.0f %.0f %.0f] \n', theta);
-
-	fprintf('Program paused. Press enter to continue.\n');
-	%pause;
-
-
-
-
-
-
-
     % ============================================================
 
     % Save the cost J in every iteration    
