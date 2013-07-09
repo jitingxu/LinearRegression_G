@@ -2,6 +2,6 @@ LinearRegression_G
 ==================
 exercise issued by Dr. Ng from Coursa.com
 
-Studeng: Jiting XU
+Student: Jiting XU
 
 email: xu57@email.sc.edu
