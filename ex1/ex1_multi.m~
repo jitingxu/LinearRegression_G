@@ -51,6 +51,11 @@ fprintf('Normalizing Features ...\n');
 
 [X mu sigma] = featureNormalize(X);
 
+fprintf('First 10 examples from the dataset: \n');
+fprintf(' x = [%.0f %.0f], y = %.0f \n', [X(1:10,:) y(1:10,:)]');
+
+fprintf('Program paused. Press enter to continue.\n');
+pause;
 
 % Add intercept term to X
 X = [ones(m, 1) X];
@@ -105,12 +110,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
- X_pred = [1650 3];
- m =size(X_pred,1);
-X_pred = (X_pred - mu) ;
-X_pred =[X_pred(1)/sigma(1)  X_pred(2)/sigma(2)];
- X_pred = [ones(m,1) X_pred];
-price = X_pred * theta; % You should change this
+price = 0; % You should change this
 
 
 % ============================================================
